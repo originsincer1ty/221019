@@ -60,7 +60,7 @@
 		function makeLeaf {
 			let k = document.querySelector('.leaf');
 			const element = document.getElementById('plantBox');
-			var l = document.createElement("div");
+			let l = document.createElement("div");
 			l.classname = "leaf";
 			l.id = "leaf" + l;
 			// 새로 생기는 leaf의 위치 = 근처 leaf div의 위치
@@ -75,7 +75,7 @@
 		// 시들기 // 
 		function leafTimer {
 			setTimeout( function() {
-				var leaf = document.getElementsByClassName("leaf");
+				let leaf = document.getElementsByClassName("leaf");
 				box.style.backgroundColor='rgb(' + a + ',' + b + ',' + c + ')';
 				for (int a; a <=10; a++) {
 					console.log("식물이"+ (a+1) + "번 시들고 있습니다.");
