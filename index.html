@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>잎 만들기 테스트</title>
+</head>
+<style type="text/css">
+	
+	.flexContain {
+			display: flex;
+			justify-content: center;
+		}
+
+		.bgVideo {
+			width: 100vw;
+			height: 100vh;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.plantBox {
+			background-color: ghostwhite;
+			width: 30vw;
+			height: 50vh;
+		}	
+
+		.leaf {
+			width: 40px;
+			height: 40px;
+			background: green;
+			position: absolute;
+		}
+
+</style>
+
+<body>
+	<section id="temporary">
+		<input type="button" value="잎 늘리기" onclick ="makeLeaf();">
+		<input type="button" value="시들기" onclick ="leafTimer();">
+	</section>
+
+	<section><h1> 기능 함수를 먼저 짰으나 해결할 수 없는 오류가 나서 실행이 되지 않습니다...</h1>
+		<img src="help.png"></img></section>
+	<section class= "flexContain">
+		<div class="bgVideo">
+			<div class="plantBox">
+				<div class="leaf">
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+<script type="text/javascript">
+	
+		function makeLeaf {
+			let k = document.querySelector('.leaf');
+			const element = document.getElementById('plantBox');
+			var l = document.createElement("div");
+			l.classname = "leaf";
+			l.id = "leaf" + l;
+			// 새로 생기는 leaf의 위치 = 근처 leaf div의 위치
+			let a = (Math.floor(Math.random() * 100) + k.getBoundingClientRect().top) + "px";
+			let b = let a = (Math.floor(Math.random() * 100) + k.getBoundingClientRect().left) + "px";
+			l.style.left = a + "px";
+			l.style.top = b + "px";
+			element.appendChild(l);
+		}
+
+
+		// 시들기 // 
+		function leafTimer {
+			setTimeout( function() {
+				var leaf = document.getElementsByClassName("leaf");
+				box.style.backgroundColor='rgb(' + a + ',' + b + ',' + c + ')';
+				for (int a; a <=10; a++) {
+					console.log("식물이"+ (a+1) + "번 시들고 있습니다.");
+				}
+				if (a = 10); {
+					console.log("식물이 죽었다.")
+					// 식물이 완전히 죽는다. 기능들이 끝난다. 메세지가 출력된다.
+				}
+			}, 5000)
+			// 5초
+			// 시간이 흐른 후 한 번 실행한다.
+		}
+
+</script>
+
+</html>
